@@ -1,4 +1,3 @@
-version: "3.7"
 services:
   postgres:
     image: postgres:13-alpine
@@ -14,7 +13,7 @@ services:
       - "${PWD}/db-data:/var/lib/postgresql/data"
 
   resetdb:
-    image: amazon/mwaa-local:2_10_3
+    image: amazon/mwaa-local:2_11_0
     depends_on:
       - postgres
     environment:
